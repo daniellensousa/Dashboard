@@ -1,0 +1,11 @@
+Rodar testes
+python -m unittest discover tests
+
+Rodar front end
+npm run dev
+
+Rodar backend 
+python app.py
+
+Precisa da variavel de ambiente 
+SECRET_KEY 
