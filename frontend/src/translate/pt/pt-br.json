@@ -1,0 +1,26 @@
+{
+  "translation": {
+    "TodaySales": "Vendas de hoje",
+    "SalesSummary": "Resumo de vendas",
+    "TotalSales": "Vendas totais",
+    "TotalOrders": "Total de pedidos",
+    "ProductSold": "Produto vendido",
+    "NewCustomers": "Novos clientes",
+    "VisitorInsights": "Visão geral dos visitantes",
+    "TotalRevenue": "Receita total",
+    "OnlineSales": "Vendas online",
+    "OffilneSales": "Vendas offline",
+    "CustomerSatisfaction": "Satisfação do cliente",
+    "TargetVsReality": "Meta vs Realidade",
+    "RealitySales": "Vendas reais",
+    "TargetSales": "Vendas alvo",
+    "Commercial": "Comercial",
+    "Order": "Ordem",
+    "Products": "Produtos",
+    "SalesReport": "Relatório de vendas",
+    "Messages": "Mensagens",
+    "Settings": "Configurações",
+    "SignOut": "Sair",
+    "Leaderboard": "Quadro de líderes"
+  }
+}

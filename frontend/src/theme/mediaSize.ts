@@ -1,0 +1,6 @@
+export const TICKET_SIDEBAR_WIDTH = '500px'
+export const X_SMALL_WIDTH = '960px'
+export const SMALL_WIDTH = '1220px'
+export const HIGH_HD_PLUS_WIDTH = '1540px'
+export const FULL_HD_WIDTH = '1860px'
+export const EXTRA_FULL_HD_WIDTH = '6000px'

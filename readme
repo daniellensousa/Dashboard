@@ -2,10 +2,13 @@ Rodar testes
 python -m unittest discover tests
 
 Rodar front end
-npm run dev
+npm start
 
 Rodar backend 
 python app.py
 
 Precisa da variavel de ambiente 
 SECRET_KEY 
+
+Baixar dependencias do back end 
+pip install -r requirements.txt

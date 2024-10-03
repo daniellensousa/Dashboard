@@ -1,0 +1,26 @@
+{
+  "translation": {
+    "TodaySales": "Today's sales",
+    "SalesSummary": "Sales summary",
+    "TotalSales": "Total sales",
+    "TotalOrders": "Total orders",
+    "ProductSold": "Product sold",
+    "New Customers": "New customers",
+    "VisitorInsights": "Visitor insights",
+    "TotalRevenue": "Total revenue",
+    "OnlineSales": "Online sales",
+    "OffilneSales": "Offline sales",
+    "CustomerSatisfaction": "Customer satisfaction",
+    "TargetVsReality": "Target vs Reality",
+    "RealitySales": "Reality sales",
+    "TargetSales": "Target sales",
+    "Commercial": "Commercial",
+    "Order": "Order",
+    "Products": "Products",
+    "SalesReport": "Sales report",
+    "Messages": "Messages",
+    "Settings": "Settings",
+    "SignOut": "Sign out",
+    "Leaderboard": "Leaderboard"
+  }
+}
