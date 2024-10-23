@@ -16,6 +16,8 @@ export default function useLogin(){
                 password,
             });
             if(response.status  == 200){
+                // Armazene o token no localStorage
+                localStorage.setItem('authToken', response.data.token);
                 navigate('/home')            
             }
         } catch (error: any) {
@@ -26,7 +28,6 @@ export default function useLogin(){
             }
         }
     };
-
 
     return{
         handleLogin,

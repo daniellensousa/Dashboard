@@ -1,15 +1,13 @@
-import { Navigate, Outlet } from "react-router";
-import { useAuth } from "../../context/authContext";
+import { Navigate } from 'react-router-dom';
 
-interface ProtectedRouteProps {
-    children?: React.ReactNode
-}
-
-export function ProtectedRoute({ children }: Readonly<ProtectedRouteProps>){
-    const { isAuthenticated } = useAuth();
-
-    if(!isAuthenticated){
-        return <Navigate to='/' replace />
+function ProtectedRoute({ children }: { children: JSX.Element }) {
+    const authToken = localStorage.getItem('authToken');
+    
+    if (!authToken) {
+        return <Navigate to="/" />;
     }
-    return children ? <>{children}</> : <Outlet />;
+
+    return children;
 }
+
+export default ProtectedRoute;
