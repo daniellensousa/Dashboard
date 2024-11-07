@@ -7,18 +7,27 @@ import { IoChatboxEllipsesOutline } from 'react-icons/io5'
 import { LuSettings } from 'react-icons/lu'
 import { PiSignOutBold } from 'react-icons/pi'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom' 
+
 export default function Sidebar() {
+    const navigate = useNavigate()
     const tabTitle = [
-        { title: "dashboard", icon: <BiSolidPieChart /> },
-        { title: "Leaderboard", icon: <RiBarChartLine /> },
-        { title: "order", icon: <MdOutlineShoppingCart /> },
-        { title: "Products", icon: <RiShoppingBag4Line /> },
-        { title: "Sales Report", icon: <AiOutlineLineChart /> },
-        { title: "Messages", icon: <IoChatboxEllipsesOutline /> },
-        { title: "Settings", icon: <LuSettings /> },
-        { title: "Sign Out", icon: <PiSignOutBold /> }
+        { title: "Dashboard", icon: <BiSolidPieChart />, path: "/home" },
+        { title: "Leaderboard", icon: <RiBarChartLine />, path: "/leaderboard" },
+        { title: "Order", icon: <MdOutlineShoppingCart />, path: "/orders" },
+        { title: "Products", icon: <RiShoppingBag4Line />, path: "/products" },
+        { title: "Sales Report", icon: <AiOutlineLineChart />, path: "/sales-report" },
+        { title: "Messages", icon: <IoChatboxEllipsesOutline />, path: "/messages" },
+        { title: "Settings", icon: <LuSettings />, path: "/settings" },
+        { title: "Sign Out", icon: <PiSignOutBold />, path: "/sign-out" }
     ]
     const [activeTab, setActiveTab] = useState(0)
+
+    const handleNavigation = (index: number, path: string) => {
+        setActiveTab(index)
+        navigate(path)
+    }
+
     return (
         <_.SidebarContainer>
             <_.SidebarHeader>
@@ -30,7 +39,7 @@ export default function Sidebar() {
                     <_.SidebarTab
                         key={index}
                         select={activeTab === index}
-                        onClick={() => setActiveTab(index)}
+                        onClick={() => handleNavigation(index, tab.path)}
                     >
                         <p>{tab.icon}</p>
                         <small>{tab.title}</small>
