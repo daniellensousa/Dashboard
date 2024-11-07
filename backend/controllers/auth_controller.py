@@ -42,6 +42,5 @@ def login_user():
         }), 200
 
     except Exception as e:
-        # Log the error details (opcional, útil para depuração)
-        traceback.print_exc()  # Isso imprime o rastreamento completo do erro no console
+        traceback.print_exc() 
         return jsonify({"error": "Internal Server Error", "message": str(e)}), 500

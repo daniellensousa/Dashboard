@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { getLogin } from "../service/login/api";
 
 export default function useLogin(){
     const [email, setEmail] = useState("")
@@ -11,12 +12,9 @@ export default function useLogin(){
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://127.0.0.1:5000/login', {
-                email,
-                password,
-            });
+            const response = await getLogin(email, password)
+
             if(response.status  == 200){
-                // Armazene o token no localStorage
                 localStorage.setItem('authToken', response.data.token);
                 navigate('/home')            
             }
